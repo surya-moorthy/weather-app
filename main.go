@@ -17,7 +17,7 @@ func fetchWeather(client *http.Client, city string, ch chan<- string, wg *sync.W
 
 	defer wg.Done()
 
-	const apikey = "0ddecdcf4708d159f28f688e95da021c"
+	const apikey = ""
 	url := fmt.Sprintf("https://api.openweathermap.org/data/2.5/weather?q=%s&appid=%s", city, apikey)
 	resp, err := client.Get(url)
 	if err != nil {
